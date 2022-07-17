@@ -14,7 +14,7 @@ public class Util {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-//            DriverManager.registerDriver(new Driver());
+            DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
             connection.setAutoCommit(false);
             System.out.println("Соединение с БД установлено");
