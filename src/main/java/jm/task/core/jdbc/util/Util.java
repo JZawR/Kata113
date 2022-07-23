@@ -16,7 +16,6 @@ public class Util {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            connection.setAutoCommit(false);
             System.out.println("Соединение с БД установлено");
         } catch (SQLException e) {
             e.printStackTrace();
